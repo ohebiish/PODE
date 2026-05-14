@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- PODE Mark — Solid Orange (基本ロゴマーク) -->
+  <circle cx="128" cy="128" r="128" fill="#FF4D1F"/>
+  <g fill="#FFFFFF">
+    <polygon points="128,36 88,105 168,105"/>
+    <polygon points="88,105 48,174 128,174"/>
+    <polygon points="168,105 128,174 208,174"/>
+  </g>
+</svg>

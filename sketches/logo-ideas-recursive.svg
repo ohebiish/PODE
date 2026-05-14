@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1300" width="1200" height="1300" font-family="'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="db" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFD60A"/>
+      <stop offset="50%" stop-color="#FF4D1F"/>
+      <stop offset="100%" stop-color="#534AB7"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="1300" fill="#0A0A0A"/>
+
+  <!-- Header -->
+  <text x="60" y="80" fill="#FFFFFF" font-size="42" font-weight="800" letter-spacing="2">Recursive Triforce — 4 Variations</text>
+  <text x="60" y="112" fill="#999" font-size="16">入れ子の深さ・配置・色の振り方で印象が変わる</text>
+
+  <!-- A: Center-only recursion (現行案) -->
+  <g transform="translate(60 180)">
+    <text x="0" y="0" fill="#FFFFFF" font-size="18" font-weight="700">A. Single Echo — 中央1段だけ</text>
+    <text x="0" y="22" fill="#999" font-size="12">前案。バランス良くシンプル</text>
+    <g transform="translate(60 50)">
+      <circle cx="100" cy="100" r="100" fill="url(#db)"/>
+      <g transform="translate(100 100) scale(0.83) translate(-100 -100)">
+        <polygon points="100,28 68,84 132,84" fill="#FFFFFF"/>
+        <polygon points="68,84 36,140 100,140" fill="#FFFFFF"/>
+        <polygon points="132,84 100,140 164,140" fill="#FFFFFF"/>
+      </g>
+      <g transform="translate(56 70) scale(0.4)">
+        <polygon points="80,0 60,35 100,35" fill="#FFFFFF"/>
+        <polygon points="60,35 40,70 80,70" fill="#FFFFFF"/>
+        <polygon points="100,35 80,70 120,70" fill="#FFFFFF"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- B: Deep recursion (2 levels) -->
+  <g transform="translate(460 180)">
+    <text x="0" y="0" fill="#FFFFFF" font-size="18" font-weight="700">B. Deep Echo — 2段ネスト</text>
+    <text x="0" y="22" fill="#999" font-size="12">無限の入れ子。フラクタル感が強い</text>
+    <g transform="translate(60 50)">
+      <circle cx="100" cy="100" r="100" fill="url(#db)"/>
+      <g transform="translate(100 100) scale(0.83) translate(-100 -100)">
+        <polygon points="100,28 68,84 132,84" fill="#FFFFFF"/>
+        <polygon points="68,84 36,140 100,140" fill="#FFFFFF"/>
+        <polygon points="132,84 100,140 164,140" fill="#FFFFFF"/>
+      </g>
+      <!-- Level 2 -->
+      <g transform="translate(56 70) scale(0.4)">
+        <polygon points="80,0 60,35 100,35" fill="#FFFFFF"/>
+        <polygon points="60,35 40,70 80,70" fill="#FFFFFF"/>
+        <polygon points="100,35 80,70 120,70" fill="#FFFFFF"/>
+      </g>
+      <!-- Level 3 (deepest) -->
+      <g transform="translate(76 84) scale(0.16)">
+        <polygon points="80,0 60,35 100,35" fill="#FFFFFF"/>
+        <polygon points="60,35 40,70 80,70" fill="#FFFFFF"/>
+        <polygon points="100,35 80,70 120,70" fill="#FFFFFF"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- C: Triple recursion — Sierpinski-like, all 3 sub-triangles get recursion -->
+  <g transform="translate(860 180)">
+    <text x="0" y="0" fill="#FFFFFF" font-size="18" font-weight="700">C. Sierpinski — 全Δに入れ子</text>
+    <text x="0" y="22" fill="#999" font-size="12">数学的・神秘的。情報量多め</text>
+    <g transform="translate(60 50)">
+      <circle cx="100" cy="100" r="100" fill="url(#db)"/>
+      <!-- Level 1 (outer triforce) -->
+      <g transform="translate(100 100) scale(0.83) translate(-100 -100)">
+        <polygon points="100,28 68,84 132,84" fill="#FFFFFF"/>
+        <polygon points="68,84 36,140 100,140" fill="#FFFFFF"/>
+        <polygon points="132,84 100,140 164,140" fill="#FFFFFF"/>
+      </g>
+      <!-- Level 2 in each: center, bottom-left, bottom-right small triforces inside the inverted gaps of each big sub-triangle -->
+      <!-- Center gap -->
+      <g transform="translate(56 70) scale(0.4)">
+        <polygon points="80,0 60,35 100,35" fill="url(#db)"/>
+        <polygon points="60,35 40,70 80,70" fill="url(#db)"/>
+        <polygon points="100,35 80,70 120,70" fill="url(#db)"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- D: Recursive with yellow accent (highlight the inner) -->
+  <g transform="translate(60 660)">
+    <text x="0" y="0" fill="#FFFFFF" font-size="18" font-weight="700">D. Yellow Core — 中心に閃き</text>
+    <text x="0" y="22" fill="#999" font-size="12">入れ子の最深部だけイエロー。"核に閃き"</text>
+    <g transform="translate(60 50)">
+      <circle cx="100" cy="100" r="100" fill="url(#db)"/>
+      <g transform="translate(100 100) scale(0.83) translate(-100 -100)">
+        <polygon points="100,28 68,84 132,84" fill="#FFFFFF"/>
+        <polygon points="68,84 36,140 100,140" fill="#FFFFFF"/>
+        <polygon points="132,84 100,140 164,140" fill="#FFFFFF"/>
+      </g>
+      <g transform="translate(56 70) scale(0.4)">
+        <polygon points="80,0 60,35 100,35" fill="#FFD60A"/>
+        <polygon points="60,35 40,70 80,70" fill="#FFD60A"/>
+        <polygon points="100,35 80,70 120,70" fill="#FFD60A"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- E: Inverted inner (recursion mirrors orientation) -->
+  <g transform="translate(460 660)">
+    <text x="0" y="0" fill="#FFFFFF" font-size="18" font-weight="700">E. Mirror Core — 反転入れ子</text>
+    <text x="0" y="22" fill="#999" font-size="12">内側のTriforceを反転。動きと対比が出る</text>
+    <g transform="translate(60 50)">
+      <circle cx="100" cy="100" r="100" fill="url(#db)"/>
+      <g transform="translate(100 100) scale(0.83) translate(-100 -100)">
+        <polygon points="100,28 68,84 132,84" fill="#FFFFFF"/>
+        <polygon points="68,84 36,140 100,140" fill="#FFFFFF"/>
+        <polygon points="132,84 100,140 164,140" fill="#FFFFFF"/>
+      </g>
+      <!-- Inverted small triforce -->
+      <g transform="translate(100 116) rotate(180) scale(0.4) translate(-80 -35)">
+        <polygon points="80,0 60,35 100,35" fill="#FFFFFF"/>
+        <polygon points="60,35 40,70 80,70" fill="#FFFFFF"/>
+        <polygon points="100,35 80,70 120,70" fill="#FFFFFF"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- F: Gradient core (inner triforce uses gradient, hole-through feeling) -->
+  <g transform="translate(860 660)">
+    <text x="0" y="0" fill="#FFFFFF" font-size="18" font-weight="700">F. Portal Core — 中心がグラデ</text>
+    <text x="0" y="22" fill="#999" font-size="12">入れ子の中心だけグラデ。穴・ポータルのような奥行き</text>
+    <g transform="translate(60 50)">
+      <circle cx="100" cy="100" r="100" fill="url(#db)"/>
+      <g transform="translate(100 100) scale(0.83) translate(-100 -100)">
+        <polygon points="100,28 68,84 132,84" fill="#FFFFFF"/>
+        <polygon points="68,84 36,140 100,140" fill="#FFFFFF"/>
+        <polygon points="132,84 100,140 164,140" fill="#FFFFFF"/>
+      </g>
+      <g transform="translate(56 70) scale(0.4)">
+        <polygon points="80,0 60,35 100,35" fill="url(#db)"/>
+        <polygon points="60,35 40,70 80,70" fill="url(#db)"/>
+        <polygon points="100,35 80,70 120,70" fill="url(#db)"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <line x1="60" y1="1140" x2="1140" y2="1140" stroke="#333" stroke-width="1"/>
+  <text x="60" y="1190" fill="#FFFFFF" font-size="16" font-weight="700">どの方向が一番ピンと来ますか？</text>
+  <text x="60" y="1218" fill="#999" font-size="13">A: シンプル / B: 無限感 / C: 数学的 / D: 閃きアクセント / E: 反転の動き / F: ポータル感</text>
+</svg>

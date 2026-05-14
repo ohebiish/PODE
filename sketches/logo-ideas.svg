@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1400" width="1200" height="1400" font-family="'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="db" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFD60A"/>
+      <stop offset="50%" stop-color="#FF4D1F"/>
+      <stop offset="100%" stop-color="#534AB7"/>
+    </linearGradient>
+    <linearGradient id="dbh" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFD60A"/>
+      <stop offset="50%" stop-color="#FF4D1F"/>
+      <stop offset="100%" stop-color="#534AB7"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="1400" fill="#FAFAF7"/>
+
+  <!-- Header -->
+  <text x="60" y="80" fill="#0A0A0A" font-size="42" font-weight="800" letter-spacing="2">PODE Logo Ideas</text>
+  <text x="60" y="112" fill="#666" font-size="16">4 directions — オレンジ #FF4D1F / Delta Burst</text>
+
+  <!-- ========== Idea 1: Triforce in Circle ========== -->
+  <g transform="translate(60 170)">
+    <text x="0" y="-10" fill="#0A0A0A" font-size="20" font-weight="700">① Triforce Δ — 現行案</text>
+    <text x="0" y="14" fill="#666" font-size="13">3つのΔを大きなΔに組む。方程式と部隊感を両立</text>
+
+    <!-- Solid -->
+    <g transform="translate(0 40)">
+      <circle cx="120" cy="120" r="120" fill="#FF4D1F"/>
+      <polygon points="120,34 82,100 158,100" fill="#FFFFFF"/>
+      <polygon points="82,100 44,166 120,166" fill="#FFFFFF"/>
+      <polygon points="158,100 120,166 196,166" fill="#FFFFFF"/>
+    </g>
+    <!-- Gradient -->
+    <g transform="translate(260 40)">
+      <circle cx="120" cy="120" r="120" fill="url(#db)"/>
+      <polygon points="120,34 82,100 158,100" fill="#FFFFFF"/>
+      <polygon points="82,100 44,166 120,166" fill="#FFFFFF"/>
+      <polygon points="158,100 120,166 196,166" fill="#FFFFFF"/>
+    </g>
+  </g>
+
+  <!-- ========== Idea 2: P[Δ]DE Wordmark ========== -->
+  <g transform="translate(660 170)">
+    <text x="0" y="-10" fill="#0A0A0A" font-size="20" font-weight="700">② P△DE — Wordmark</text>
+    <text x="0" y="14" fill="#666" font-size="13">ワード内の "O" を Δ に置き換える文字組ロゴ</text>
+
+    <!-- Solid version -->
+    <g transform="translate(0 80)">
+      <text x="0" y="100" font-size="120" font-weight="900" letter-spacing="6" fill="#0A0A0A">P</text>
+      <polygon points="105,108 175,108 140,38" fill="#FF4D1F"/>
+      <text x="185" y="100" font-size="120" font-weight="900" letter-spacing="6" fill="#0A0A0A">DE</text>
+    </g>
+    <!-- Gradient delta version -->
+    <g transform="translate(0 230)">
+      <text x="0" y="100" font-size="120" font-weight="900" letter-spacing="6" fill="#0A0A0A">P</text>
+      <polygon points="105,108 175,108 140,38" fill="url(#dbh)"/>
+      <text x="185" y="100" font-size="120" font-weight="900" letter-spacing="6" fill="#0A0A0A">DE</text>
+    </g>
+  </g>
+
+  <!-- ========== Idea 3: Single bold Δ ========== -->
+  <g transform="translate(60 730)">
+    <text x="0" y="-10" fill="#0A0A0A" font-size="20" font-weight="700">③ Solo Δ — 1枚の大きなデルタ</text>
+    <text x="0" y="14" fill="#666" font-size="13">ミニマル。ファビコン・刻印・小サイズで効く</text>
+
+    <g transform="translate(0 40)">
+      <circle cx="120" cy="120" r="120" fill="#FF4D1F"/>
+      <polygon points="120,40 50,190 190,190" fill="#FFFFFF"/>
+    </g>
+    <g transform="translate(260 40)">
+      <circle cx="120" cy="120" r="120" fill="#FFFFFF" stroke="#FF4D1F" stroke-width="6"/>
+      <polygon points="120,40 50,190 190,190" fill="url(#db)"/>
+    </g>
+  </g>
+
+  <!-- ========== Idea 4: Orbit Δ (potential energy) ========== -->
+  <g transform="translate(660 730)">
+    <text x="0" y="-10" fill="#0A0A0A" font-size="20" font-weight="700">④ Orbit Δ — ポテンシャルが軌道を描く</text>
+    <text x="0" y="14" fill="#666" font-size="13">Δの周りに3つの軌道。可能性が広がる動きを示す</text>
+
+    <g transform="translate(0 40)">
+      <circle cx="120" cy="120" r="118" fill="none" stroke="#FF4D1F" stroke-width="2"/>
+      <ellipse cx="120" cy="120" rx="118" ry="50" fill="none" stroke="#FF4D1F" stroke-width="2" transform="rotate(60 120 120)"/>
+      <ellipse cx="120" cy="120" rx="118" ry="50" fill="none" stroke="#FF4D1F" stroke-width="2" transform="rotate(-60 120 120)"/>
+      <polygon points="120,60 70,160 170,160" fill="#FF4D1F"/>
+    </g>
+    <g transform="translate(260 40)">
+      <circle cx="120" cy="120" r="118" fill="none" stroke="url(#db)" stroke-width="3"/>
+      <ellipse cx="120" cy="120" rx="118" ry="50" fill="none" stroke="url(#db)" stroke-width="3" transform="rotate(60 120 120)"/>
+      <ellipse cx="120" cy="120" rx="118" ry="50" fill="none" stroke="url(#db)" stroke-width="3" transform="rotate(-60 120 120)"/>
+      <polygon points="120,60 70,160 170,160" fill="url(#db)"/>
+    </g>
+  </g>
+
+  <!-- Footer note -->
+  <text x="60" y="1340" fill="#999" font-size="13">各案ともに左：オレンジ単色版 / 右：Delta Burstグラデ版</text>
+  <text x="60" y="1362" fill="#999" font-size="13">気に入った番号と「単色／グラデのどちらをメインに」を教えてください</text>
+</svg>

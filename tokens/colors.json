@@ -1,0 +1,47 @@
+{
+  "$schema": "https://schemas.pode.inc/colors.json",
+  "brand": {
+    "primary": {
+      "value": "#FF4D1F",
+      "name": "Orange",
+      "meaning": "Human / 人の熱量・主体性",
+      "role": "primary"
+    },
+    "canvas": {
+      "value": "#FFFFFF",
+      "name": "White",
+      "meaning": "Canvas / 余白",
+      "role": "background"
+    },
+    "ink": {
+      "value": "#0A0A0A",
+      "name": "Ink",
+      "meaning": "Text base",
+      "role": "text"
+    }
+  },
+  "sub": {
+    "purple": {
+      "value": "#534AB7",
+      "name": "Purple",
+      "meaning": "AI / Claude"
+    },
+    "yellow": {
+      "value": "#FFD60A",
+      "name": "Yellow",
+      "meaning": "Creative / 閃き"
+    }
+  },
+  "gradient": {
+    "deltaBurst": {
+      "type": "linear",
+      "angle": "135deg",
+      "stops": [
+        { "offset": "0%", "color": "#FFD60A", "meaning": "Creative" },
+        { "offset": "50%", "color": "#FF4D1F", "meaning": "Human" },
+        { "offset": "100%", "color": "#534AB7", "meaning": "AI" }
+      ],
+      "css": "linear-gradient(135deg, #FFD60A 0%, #FF4D1F 50%, #534AB7 100%)"
+    }
+  }
+}

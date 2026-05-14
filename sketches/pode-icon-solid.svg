@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- PODE Icon — Solid (アプリアイコン・ファビコン用) -->
+  <circle cx="128" cy="128" r="128" fill="#534AB7"/>
+  <g fill="#FFFFFF">
+    <polygon points="128,52 76,142 180,142"/>
+    <polygon points="128,52 76,142 180,142" transform="rotate(120 128 128)"/>
+    <polygon points="128,52 76,142 180,142" transform="rotate(240 128 128)"/>
+  </g>
+</svg>

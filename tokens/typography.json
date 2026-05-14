@@ -1,0 +1,37 @@
+{
+  "$schema": "https://schemas.pode.inc/typography.json",
+  "status": "provisional",
+  "note": "専用ブランドフォント未確定。Google Fontsベースの暫定セット。",
+  "fonts": {
+    "displayEn": {
+      "family": "Inter",
+      "weights": [700, 800, 900],
+      "source": "Google Fonts",
+      "use": "Display / Headline (English)"
+    },
+    "displayJp": {
+      "family": "Noto Sans JP",
+      "weights": [700, 900],
+      "source": "Google Fonts",
+      "use": "Display / Headline (日本語)"
+    },
+    "bodyEn": {
+      "family": "Inter",
+      "weights": [400, 500],
+      "source": "Google Fonts",
+      "use": "Body (English)"
+    },
+    "bodyJp": {
+      "family": "Noto Sans JP",
+      "weights": [400, 500],
+      "source": "Google Fonts",
+      "use": "Body (日本語)"
+    }
+  },
+  "rules": {
+    "wordmarkTracking": "0.08em",
+    "displayLineHeight": 1.15,
+    "bodyLineHeight": 1.7,
+    "orderBilingual": "en-first, ja-after"
+  }
+}

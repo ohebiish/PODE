@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="deltaBurst" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFD60A"/>
+      <stop offset="50%" stop-color="#FF4D1F"/>
+      <stop offset="100%" stop-color="#534AB7"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1000" height="1000" fill="#FFFFFF"/>
+
+  <!-- Header -->
+  <text x="60" y="80" fill="#0A0A0A" font-size="44" font-weight="800" letter-spacing="2">PODE Brand Colors</text>
+  <text x="60" y="115" fill="#666666" font-size="18">確定パレット — Human × AI = Creative</text>
+
+  <!-- Solid colors -->
+  <text x="60" y="180" fill="#0A0A0A" font-size="22" font-weight="700">Solid（コーポレートカラー）</text>
+
+  <!-- Orange -->
+  <rect x="60" y="210" width="430" height="320" fill="#FF4D1F"/>
+  <text x="85" y="495" fill="#FFFFFF" font-size="22" font-weight="700">Orange</text>
+  <text x="85" y="520" fill="#FFFFFF" font-size="16" opacity="0.9">#FF4D1F  ／  Human</text>
+
+  <!-- White -->
+  <rect x="510" y="210" width="430" height="320" fill="#FFFFFF" stroke="#E5E5E5" stroke-width="2"/>
+  <text x="535" y="495" fill="#0A0A0A" font-size="22" font-weight="700">White</text>
+  <text x="535" y="520" fill="#666666" font-size="16">#FFFFFF  ／  Canvas</text>
+
+  <!-- Gradient -->
+  <text x="60" y="600" fill="#0A0A0A" font-size="22" font-weight="700">Gradient（メインビジュアル）</text>
+
+  <rect x="60" y="630" width="880" height="240" fill="url(#deltaBurst)" rx="16"/>
+  <text x="85" y="835" fill="#FFFFFF" font-size="22" font-weight="700">Delta Burst</text>
+  <text x="85" y="860" fill="#FFFFFF" font-size="14" opacity="0.9">#FFD60A → #FF4D1F → #534AB7</text>
+
+  <text x="60" y="930" fill="#999999" font-size="14">Creative（閃き）→ Human（人）→ AI / Claude（知性）</text>
+</svg>

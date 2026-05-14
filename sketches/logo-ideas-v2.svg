@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" width="1200" height="1500" font-family="'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="db" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFD60A"/>
+      <stop offset="50%" stop-color="#FF4D1F"/>
+      <stop offset="100%" stop-color="#534AB7"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="1500" fill="#0A0A0A"/>
+
+  <!-- Header -->
+  <text x="60" y="80" fill="#FFFFFF" font-size="42" font-weight="800" letter-spacing="2">PODE Logo Ideas v2</text>
+  <text x="60" y="112" fill="#999" font-size="16">① Triforce × ④ Orbit を発展させた4案</text>
+
+  <!-- ========== A: Recursive Triforce ========== -->
+  <g transform="translate(60 180)">
+    <text x="0" y="0" fill="#FFFFFF" font-size="20" font-weight="700">A. Recursive Triforce — 入れ子のΔ</text>
+    <text x="0" y="24" fill="#999" font-size="13">中央の逆三角の中にミニTriforceを入れる。可能性の入れ子構造</text>
+
+    <g transform="translate(140 60)">
+      <circle cx="120" cy="120" r="120" fill="url(#db)"/>
+      <!-- Outer triforce -->
+      <polygon points="120,34 82,100 158,100" fill="#FFFFFF"/>
+      <polygon points="82,100 44,166 120,166" fill="#FFFFFF"/>
+      <polygon points="158,100 120,166 196,166" fill="#FFFFFF"/>
+      <!-- Inner mini triforce inside the inverted center triangle -->
+      <g transform="translate(82 100) scale(0.5)">
+        <polygon points="76,0 57,33 95,33" fill="#FFFFFF"/>
+        <polygon points="57,33 38,66 76,66" fill="#FFFFFF"/>
+        <polygon points="95,33 76,66 114,66" fill="#FFFFFF"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- ========== B: Triforce + Orbit (①×④) ========== -->
+  <g transform="translate(660 180)">
+    <text x="0" y="0" fill="#FFFFFF" font-size="20" font-weight="700">B. Orbiting Triforce — ①×④ 融合</text>
+    <text x="0" y="24" fill="#999" font-size="13">Triforceの周りに軌道。中心の核と広がる可能性を両立</text>
+
+    <g transform="translate(140 60)">
+      <!-- Orbits -->
+      <ellipse cx="120" cy="120" rx="138" ry="60" fill="none" stroke="url(#db)" stroke-width="3" opacity="0.6" transform="rotate(60 120 120)"/>
+      <ellipse cx="120" cy="120" rx="138" ry="60" fill="none" stroke="url(#db)" stroke-width="3" opacity="0.6" transform="rotate(-60 120 120)"/>
+      <ellipse cx="120" cy="120" rx="138" ry="60" fill="none" stroke="url(#db)" stroke-width="3" opacity="0.6"/>
+      <!-- Core triforce -->
+      <circle cx="120" cy="120" r="80" fill="url(#db)"/>
+      <g transform="translate(120 120) scale(0.55) translate(-120 -120)">
+        <polygon points="120,34 82,100 158,100" fill="#FFFFFF"/>
+        <polygon points="82,100 44,166 120,166" fill="#FFFFFF"/>
+        <polygon points="158,100 120,166 196,166" fill="#FFFFFF"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- ========== C: Triforce Burst (rays) ========== -->
+  <g transform="translate(60 660)">
+    <text x="0" y="0" fill="#FFFFFF" font-size="20" font-weight="700">C. Triforce Burst — 放射するΔ</text>
+    <text x="0" y="24" fill="#999" font-size="13">Triforceから3方向へ放射。Delta Forceの「飛び出す力」を表現</text>
+
+    <g transform="translate(140 60)">
+      <circle cx="120" cy="120" r="120" fill="url(#db)"/>
+      <!-- Radiating rays from triforce vertices -->
+      <g stroke="#FFFFFF" stroke-width="3" opacity="0.4">
+        <line x1="120" y1="34" x2="120" y2="0"/>
+        <line x1="44" y1="166" x2="20" y2="186"/>
+        <line x1="196" y1="166" x2="220" y2="186"/>
+      </g>
+      <!-- Triforce -->
+      <polygon points="120,34 82,100 158,100" fill="#FFFFFF"/>
+      <polygon points="82,100 44,166 120,166" fill="#FFFFFF"/>
+      <polygon points="158,100 120,166 196,166" fill="#FFFFFF"/>
+    </g>
+  </g>
+
+  <!-- ========== D: Open Triforce (split apart) ========== -->
+  <g transform="translate(660 660)">
+    <text x="0" y="0" fill="#FFFFFF" font-size="20" font-weight="700">D. Open Triforce — 動き出すΔ</text>
+    <text x="0" y="24" fill="#999" font-size="13">3つのΔを少しずつ離す。組織が動き出す瞬間の力学</text>
+
+    <g transform="translate(140 60)">
+      <circle cx="120" cy="120" r="120" fill="url(#db)"/>
+      <!-- Split triforce: each triangle shifted outward -->
+      <g fill="#FFFFFF">
+        <polygon points="120,28 80,98 160,98"/>
+        <polygon points="78,108 38,178 118,178"/>
+        <polygon points="162,108 122,178 202,178"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- ========== E: Triforce + Orbit Single Ring ========== -->
+  <g transform="translate(60 1140)">
+    <text x="0" y="0" fill="#FFFFFF" font-size="20" font-weight="700">E. Halo Triforce — 静かな軌道</text>
+    <text x="0" y="24" fill="#999" font-size="13">Triforceに1本の細い軌道。控えめだが意味のある「広がり」</text>
+
+    <g transform="translate(140 60)">
+      <!-- Single subtle orbit -->
+      <ellipse cx="120" cy="120" rx="140" ry="50" fill="none" stroke="url(#db)" stroke-width="2.5" transform="rotate(-20 120 120)"/>
+      <circle cx="120" cy="120" r="105" fill="url(#db)"/>
+      <g transform="translate(120 120) scale(0.78) translate(-120 -120)">
+        <polygon points="120,34 82,100 158,100" fill="#FFFFFF"/>
+        <polygon points="82,100 44,166 120,166" fill="#FFFFFF"/>
+        <polygon points="158,100 120,166 196,166" fill="#FFFFFF"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Footer note -->
+  <text x="60" y="1460" fill="#999" font-size="13">気に入った案 + メイン用 / サブ用の割当を教えてください（複数併用OK）</text>
+</svg>

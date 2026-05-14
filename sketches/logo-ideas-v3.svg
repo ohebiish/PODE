@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1700" width="1200" height="1700" font-family="'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="db" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFD60A"/>
+      <stop offset="50%" stop-color="#FF4D1F"/>
+      <stop offset="100%" stop-color="#534AB7"/>
+    </linearGradient>
+    <mask id="cutTriforce">
+      <rect width="256" height="256" fill="white"/>
+      <polygon points="128,36 88,105 168,105" fill="black"/>
+      <polygon points="88,105 48,174 128,174" fill="black"/>
+      <polygon points="168,105 128,174 208,174" fill="black"/>
+    </mask>
+  </defs>
+
+  <rect width="1200" height="1700" fill="#0A0A0A"/>
+
+  <!-- Header -->
+  <text x="60" y="80" fill="#FFFFFF" font-size="42" font-weight="800" letter-spacing="2">PODE Logo — Shortlist + New</text>
+  <text x="60" y="112" fill="#999" font-size="16">TOP 3（前案から絞り込み） + NEW 3（新規アイディア）</text>
+
+  <!-- ===== TOP 3 (selected from previous rounds) ===== -->
+  <text x="60" y="180" fill="#FFD60A" font-size="22" font-weight="700" letter-spacing="2">▸ TOP 3 — Shortlist</text>
+
+  <!-- 1. Original Triforce -->
+  <g transform="translate(60 220)">
+    <text x="0" y="0" fill="#FFFFFF" font-size="18" font-weight="700">① Triforce — 原点</text>
+    <text x="0" y="22" fill="#999" font-size="12">本人選定の元案。明快で強い</text>
+    <g transform="translate(60 50)">
+      <circle cx="100" cy="100" r="100" fill="url(#db)"/>
+      <g transform="translate(100 100) scale(0.83) translate(-100 -100)">
+        <polygon points="100,28 68,84 132,84" fill="#FFFFFF"/>
+        <polygon points="68,84 36,140 100,140" fill="#FFFFFF"/>
+        <polygon points="132,84 100,140 164,140" fill="#FFFFFF"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- 2. Orbiting Triforce -->
+  <g transform="translate(460 220)">
+    <text x="0" y="0" fill="#FFFFFF" font-size="18" font-weight="700">② Orbiting Triforce</text>
+    <text x="0" y="22" fill="#999" font-size="12">核 + 軌道。広がりとパワー</text>
+    <g transform="translate(60 50)">
+      <ellipse cx="100" cy="100" rx="118" ry="48" fill="none" stroke="url(#db)" stroke-width="2.5" opacity="0.6" transform="rotate(60 100 100)"/>
+      <ellipse cx="100" cy="100" rx="118" ry="48" fill="none" stroke="url(#db)" stroke-width="2.5" opacity="0.6" transform="rotate(-60 100 100)"/>
+      <ellipse cx="100" cy="100" rx="118" ry="48" fill="none" stroke="url(#db)" stroke-width="2.5" opacity="0.6"/>
+      <circle cx="100" cy="100" r="68" fill="url(#db)"/>
+      <g transform="translate(100 100) scale(0.56) translate(-100 -100)">
+        <polygon points="100,28 68,84 132,84" fill="#FFFFFF"/>
+        <polygon points="68,84 36,140 100,140" fill="#FFFFFF"/>
+        <polygon points="132,84 100,140 164,140" fill="#FFFFFF"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- 3. Recursive Triforce -->
+  <g transform="translate(860 220)">
+    <text x="0" y="0" fill="#FFFFFF" font-size="18" font-weight="700">③ Recursive Triforce</text>
+    <text x="0" y="22" fill="#999" font-size="12">入れ子のΔ。ポテンシャルの深さ</text>
+    <g transform="translate(60 50)">
+      <circle cx="100" cy="100" r="100" fill="url(#db)"/>
+      <g transform="translate(100 100) scale(0.83) translate(-100 -100)">
+        <polygon points="100,28 68,84 132,84" fill="#FFFFFF"/>
+        <polygon points="68,84 36,140 100,140" fill="#FFFFFF"/>
+        <polygon points="132,84 100,140 164,140" fill="#FFFFFF"/>
+      </g>
+      <!-- Mini inner triforce -->
+      <g transform="translate(68 84) scale(0.4)">
+        <polygon points="80,0 60,35 100,35" fill="#FFFFFF"/>
+        <polygon points="60,35 40,70 80,70" fill="#FFFFFF"/>
+        <polygon points="100,35 80,70 120,70" fill="#FFFFFF"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Divider -->
+  <line x1="60" y1="720" x2="1140" y2="720" stroke="#333" stroke-width="1"/>
+
+  <!-- ===== NEW 3 ===== -->
+  <text x="60" y="780" fill="#FFD60A" font-size="22" font-weight="700" letter-spacing="2">▸ NEW 3 — 新アイディア</text>
+
+  <!-- 4. Hexagram (Up Δ + Down ∇) -->
+  <g transform="translate(60 820)">
+    <text x="0" y="0" fill="#FFFFFF" font-size="18" font-weight="700">④ Hexagram Δ∇ — 交差</text>
+    <text x="0" y="22" fill="#999" font-size="12">人(Δ)とAI(∇)が交わり、第3の形＝Creativeが生まれる</text>
+    <g transform="translate(60 50)">
+      <circle cx="100" cy="100" r="100" fill="url(#db)"/>
+      <!-- Up triangle -->
+      <polygon points="100,30 30,160 170,160" fill="#FFFFFF" opacity="0.95"/>
+      <!-- Down triangle -->
+      <polygon points="100,170 30,40 170,40" fill="#FFFFFF" opacity="0.5"/>
+    </g>
+  </g>
+
+  <!-- 5. Cut-out Triforce (negative space) -->
+  <g transform="translate(460 820)">
+    <text x="0" y="0" fill="#FFFFFF" font-size="18" font-weight="700">⑤ Cut-Out Triforce — 抜き</text>
+    <text x="0" y="22" fill="#999" font-size="12">グラデ円からΔを"抜く"。背景の黒/白が透けて主役になる</text>
+    <g transform="translate(60 50)">
+      <g transform="scale(0.78)">
+        <rect width="256" height="256" fill="url(#db)" mask="url(#cutTriforce)"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- 6. Echo Triforce (motion blur via stacked rotations) -->
+  <g transform="translate(860 820)">
+    <text x="0" y="0" fill="#FFFFFF" font-size="18" font-weight="700">⑥ Echo Triforce — 残像</text>
+    <text x="0" y="22" fill="#999" font-size="12">回転する残像で「動き出す瞬間」を可視化</text>
+    <g transform="translate(60 50)">
+      <circle cx="100" cy="100" r="100" fill="url(#db)"/>
+      <g transform="translate(100 100)">
+        <g transform="rotate(-12) scale(0.83) translate(-100 -100)" opacity="0.3">
+          <polygon points="100,28 68,84 132,84" fill="#FFFFFF"/>
+          <polygon points="68,84 36,140 100,140" fill="#FFFFFF"/>
+          <polygon points="132,84 100,140 164,140" fill="#FFFFFF"/>
+        </g>
+        <g transform="rotate(-6) scale(0.83) translate(-100 -100)" opacity="0.55">
+          <polygon points="100,28 68,84 132,84" fill="#FFFFFF"/>
+          <polygon points="68,84 36,140 100,140" fill="#FFFFFF"/>
+          <polygon points="132,84 100,140 164,140" fill="#FFFFFF"/>
+        </g>
+        <g transform="scale(0.83) translate(-100 -100)">
+          <polygon points="100,28 68,84 132,84" fill="#FFFFFF"/>
+          <polygon points="68,84 36,140 100,140" fill="#FFFFFF"/>
+          <polygon points="132,84 100,140 164,140" fill="#FFFFFF"/>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- Final Pick comparison: large preview of ① -->
+  <line x1="60" y1="1280" x2="1140" y2="1280" stroke="#333" stroke-width="1"/>
+  <text x="60" y="1340" fill="#FFFFFF" font-size="18" font-weight="700">▸ 用途別の見え方（候補のメイン1案で展開できます）</text>
+  <text x="60" y="1364" fill="#999" font-size="13">気に入った番号 + 「メイン / ファビコン / ワードマーク」 の割当を教えてください</text>
+
+  <!-- Mini grid showing scalability of triforce on different sizes -->
+  <g transform="translate(60 1400)">
+    <circle cx="40" cy="40" r="40" fill="url(#db)"/>
+    <g transform="translate(40 40) scale(0.83) translate(-40 -40)">
+      <polygon points="40,12 28,34 52,34" fill="#FFFFFF"/>
+      <polygon points="28,34 16,56 40,56" fill="#FFFFFF"/>
+      <polygon points="52,34 40,56 64,56" fill="#FFFFFF"/>
+    </g>
+    <text x="0" y="105" fill="#999" font-size="11">favicon 80px</text>
+  </g>
+  <g transform="translate(200 1380)">
+    <circle cx="60" cy="60" r="60" fill="url(#db)"/>
+    <g transform="translate(60 60) scale(0.83) translate(-60 -60)">
+      <polygon points="60,18 42,51 78,51" fill="#FFFFFF"/>
+      <polygon points="42,51 24,84 60,84" fill="#FFFFFF"/>
+      <polygon points="78,51 60,84 96,84" fill="#FFFFFF"/>
+    </g>
+    <text x="0" y="145" fill="#999" font-size="11">app icon 120px</text>
+  </g>
+  <g transform="translate(400 1340)">
+    <circle cx="100" cy="100" r="100" fill="url(#db)"/>
+    <g transform="translate(100 100) scale(0.83) translate(-100 -100)">
+      <polygon points="100,28 68,84 132,84" fill="#FFFFFF"/>
+      <polygon points="68,84 36,140 100,140" fill="#FFFFFF"/>
+      <polygon points="132,84 100,140 164,140" fill="#FFFFFF"/>
+    </g>
+    <text x="0" y="225" fill="#999" font-size="11">profile 200px</text>
+  </g>
+  <g transform="translate(720 1340)">
+    <circle cx="100" cy="100" r="100" fill="url(#db)"/>
+    <g transform="translate(100 100) scale(0.83) translate(-100 -100)">
+      <polygon points="100,28 68,84 132,84" fill="#FFFFFF"/>
+      <polygon points="68,84 36,140 100,140" fill="#FFFFFF"/>
+      <polygon points="132,84 100,140 164,140" fill="#FFFFFF"/>
+    </g>
+    <text x="220" y="100" font-size="56" font-weight="800" letter-spacing="6" fill="#FFFFFF">PODE</text>
+    <text x="220" y="135" font-size="14" fill="#999">wordmark / nav</text>
+  </g>
+</svg>
