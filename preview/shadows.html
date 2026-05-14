@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Card</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: var(--bg-canvas); }
+  .card { box-sizing: border-box; padding: 36px 40px; display: flex; gap: 32px; align-items: center; justify-content: space-around; }
+  .item { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  .box { width: 130px; height: 90px; background: var(--paper-pure); border-radius: var(--r-sm); }
+  .b1 { box-shadow: var(--shadow-soft); }
+  .b2 { box-shadow: var(--shadow-card); }
+  .b3 { box-shadow: var(--shadow-lift); }
+  .b4 { box-shadow: var(--shadow-cut); }
+  .lbl { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.04em; color: var(--ink-1000); }
+  .val { font-family: var(--font-mono); font-size: 9px; color: var(--ink-500); }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="item"><div class="box b1"></div><div class="lbl">shadow-soft</div><div class="val">resting</div></div>
+  <div class="item"><div class="box b2"></div><div class="lbl">shadow-card</div><div class="val">hover</div></div>
+  <div class="item"><div class="box b3"></div><div class="lbl">shadow-lift</div><div class="val">overlay</div></div>
+  <div class="item"><div class="box b4"></div><div class="lbl">shadow-cut</div><div class="val">inset hairline</div></div>
+</div>
+</body>
+</html>

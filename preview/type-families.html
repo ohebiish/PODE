@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Card</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: var(--bg-canvas); }
+  .card { box-sizing: border-box; padding: 28px 32px; display: flex; gap: 36px; align-items: flex-start; }
+  .col { flex: 1; }
+  .meta { font-family: var(--font-display-en); font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 14px; }
+  .sample-en {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 80px;
+    line-height: 0.92;
+    letter-spacing: -0.04em;
+    color: var(--fg);
+  }
+  .sample-en-it {
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    color: var(--pode-orange);
+    margin-top: 6px;
+  }
+  .sample-jp {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+    color: var(--fg);
+  }
+  .sample-mono {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 0.08em;
+    color: var(--fg);
+    margin-top: 8px;
+  }
+  .name { font-family: var(--font-display-en); font-size: 12px; font-weight: 600; color: var(--ink-2); margin-top: 14px; letter-spacing: -0.005em; }
+  .note { font-size: 11px; color: var(--ink-3); margin-top: 4px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="col">
+    <div class="meta">Display / Body EN</div>
+    <div class="sample-en">Aa</div>
+    <div class="sample-en-it">italic for accent</div>
+    <div class="name">Inter · 400 / 700 / 800 / 900</div>
+    <div class="note">Google Fonts · provisional</div>
+  </div>
+  <div class="col">
+    <div class="meta">Display / Body JP</div>
+    <div class="sample-jp">朱の力</div>
+    <div class="name">Noto Sans JP · 400 / 700 / 900</div>
+    <div class="note">Google Fonts · provisional</div>
+  </div>
+  <div class="col">
+    <div class="meta">Wordmark rule</div>
+    <div class="sample-mono">PODE</div>
+    <div class="name">letter-spacing: 0.08em</div>
+    <div class="note">BRAND.md explicit rule</div>
+  </div>
+</div>
+</body>
+</html>

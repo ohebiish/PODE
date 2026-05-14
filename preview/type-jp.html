@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Card</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: var(--bg-canvas); }
+  .card { box-sizing: border-box; padding: 28px 32px; }
+  .row { display: grid; grid-template-columns: 130px 1fr; gap: 16px 24px; align-items: baseline; }
+  .meta { font-family: var(--font-display-en); font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-3); padding-top: 12px; }
+  .spec { color: var(--fg); font-family: 'Noto Sans JP', sans-serif; }
+  .mega { font-weight: 900; font-size: 52px; line-height: 1.2; letter-spacing: 0.02em; }
+  .h    { font-weight: 700; font-size: 28px; line-height: 1.4; letter-spacing: 0.02em; }
+  .body { font-weight: 400; font-size: 15px; line-height: 1.75; letter-spacing: 0.04em; color: var(--ink-2); }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="row">
+    <div class="meta">Display JP<br/>Noto Sans JP 900</div>
+    <div class="spec mega">ポテンシャルとは何か。</div>
+
+    <div class="meta">Heading JP<br/>NSJP 700</div>
+    <div class="spec h">Claudeを日本に普及させる。</div>
+
+    <div class="meta">Body JP<br/>NSJP 400</div>
+    <div class="spec body">エンタープライズSI型ではなく、企業タイアップ型で、企業や個人の「自分ごとのポテンシャル」を引き出す。</div>
+  </div>
+</div>
+</body>
+</html>

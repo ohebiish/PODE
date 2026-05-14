@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Card</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: var(--bg-canvas); }
+  .card { box-sizing: border-box; padding: 28px 32px; display: flex; flex-direction: column; gap: 16px; }
+  .row { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+  .lbl { font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.20em; text-transform: uppercase; color: var(--ink-3); min-width: 88px; }
+
+  .pill {
+    font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+    padding: 3px 11px;
+    border-radius: 999px;
+    border: 1px solid var(--ink-line);
+    background: var(--pode-white); color: var(--fg);
+  }
+  .pill.orange { background: var(--pode-orange); color: var(--pode-white); border-color: var(--pode-orange); }
+  .pill.outline-ink { background: transparent; color: var(--fg); border-color: var(--fg); }
+  .pill.muted { background: var(--ink-soft); color: var(--ink-2); border-color: transparent; }
+  .pill.yellow { background: var(--pode-yellow); color: var(--pode-ink); border-color: var(--pode-yellow); }
+
+  .tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500;
+    padding: 6px 12px;
+    background: var(--pode-white);
+    border: 1px solid var(--ink-line);
+    border-radius: 6px;
+  }
+  .tag .x { font-size: 14px; color: var(--ink-3); cursor: pointer; }
+
+  .brk { display: inline-flex; align-items: center; gap: 8px; font-family: 'Inter', sans-serif; font-size: 13px; color: var(--ink-2); }
+  .brk .sep { width: 6px; height: 6px; background: var(--pode-orange); clip-path: polygon(50% 0, 100% 100%, 0 100%); transform: rotate(90deg); }
+  .brk .now { color: var(--fg); font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="row">
+    <div class="lbl">Tags / Pills</div>
+    <span class="pill orange">NEW</span>
+    <span class="pill yellow">Δ DELTA</span>
+    <span class="pill outline-ink">Case study</span>
+    <span class="pill muted">企業タイアップ</span>
+  </div>
+  <div class="row">
+    <div class="lbl">Removable</div>
+    <span class="tag">Claude API <span class="x">×</span></span>
+    <span class="tag">Tokyo <span class="x">×</span></span>
+    <span class="tag">Bilingual <span class="x">×</span></span>
+  </div>
+  <div class="row">
+    <div class="lbl">Breadcrumb</div>
+    <div class="brk"><span>Work</span><span class="sep"></span><span>Case studies</span><span class="sep"></span><span class="now">A regional bank, three weeks</span></div>
+  </div>
+</div>
+</body>
+</html>

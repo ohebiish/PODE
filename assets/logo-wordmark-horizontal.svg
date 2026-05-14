@@ -1,16 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 200" width="720" height="200" font-family="'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif">
-  <!-- PODE Wordmark — Horizontal -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 200" width="720" height="200" font-family="&#39;Inter&#39;, &#39;Helvetica Neue&#39;, Helvetica, Arial, sans-serif">
+  
   <g transform="translate(20 20)">
-    <circle cx="80" cy="80" r="80" fill="#FF4D1F"/>
+    <circle cx="80" cy="80" r="80" fill="#FF4D1F"></circle>
     <g fill="#FFFFFF">
-      <polygon points="80,22 55,65 105,65"/>
-      <polygon points="55,65 30,108 80,108"/>
-      <polygon points="105,65 80,108 130,108"/>
+      <polygon points="80,22 55,65 105,65"></polygon>
+      <polygon points="55,65 30,108 80,108"></polygon>
+      <polygon points="105,65 80,108 130,108"></polygon>
     </g>
   </g>
-  <text x="210" y="118"
-        font-weight="800"
-        font-size="96"
-        letter-spacing="8"
-        fill="#0A0A0A">PODE</text>
+  <text x="210" y="118" font-weight="800" font-size="96" letter-spacing="8" fill="#0A0A0A">PODE</text>
 </svg>

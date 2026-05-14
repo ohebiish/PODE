@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>PODE OG image template</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800;900&family=Noto+Sans+JP:wght@500;700;900&display=swap" rel="stylesheet">
+  <style>
+    html, body { margin: 0; padding: 0; background: #1a1a1a; }
+    .og {
+      width: 1200px;
+      height: 630px;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #FFD60A 0%, #FF4D1F 50%, #534AB7 100%);
+      font-family: 'Inter', 'Noto Sans JP', sans-serif;
+      box-sizing: border-box;
+      padding: 56px 64px;
+    }
+    .og::before {
+      content: ""; position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse at 18% 28%, rgba(255, 214, 10, 0.55), transparent 55%),
+        radial-gradient(ellipse at 88% 78%, rgba(83, 74, 183, 0.72), transparent 55%);
+      mix-blend-mode: screen;
+      pointer-events: none;
+    }
+    .og__mark {
+      position: absolute;
+      right: -90px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 540px; height: 540px;
+      filter: drop-shadow(0 30px 60px rgba(0,0,0,0.20));
+    }
+    .og__mark img { width: 100%; height: 100%; display: block; }
+
+    .og__brand {
+      position: relative; z-index: 2;
+      display: inline-flex; align-items: center; gap: 12px;
+      color: #FFFFFF;
+    }
+    .og__brand img { width: 44px; height: 44px; }
+    .og__brand-word {
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 28px;
+      letter-spacing: 0.08em;
+    }
+
+    .og__main {
+      position: relative; z-index: 2;
+      max-width: 720px;
+      margin-top: 56px;
+    }
+    .og__main h1 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 900;
+      font-size: 116px;
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      color: #FFFFFF;
+      margin: 0;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.12);
+    }
+    .og__main .sub {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-style: italic;
+      font-weight: 800;
+      font-size: 56px;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: #FFFFFF;
+      margin-top: 12px;
+      opacity: 0.94;
+    }
+
+    /* Japanese variant */
+    .og[lang="ja"] .og__main h1 {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 900;
+      font-size: 104px;
+      line-height: 1.05;
+      letter-spacing: 0.02em;
+    }
+    .og[lang="ja"] .og__main .sub {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 44px;
+      line-height: 1.4;
+      letter-spacing: 0.04em;
+    }
+
+    .og__foot {
+      position: absolute; left: 64px; bottom: 56px;
+      z-index: 2;
+      display: flex; align-items: center; gap: 24px;
+      color: #FFFFFF;
+    }
+    .og__foot-eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.20em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.78);
+    }
+    .og__foot-tag {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      letter-spacing: 0.04em;
+      color: rgba(255, 255, 255, 0.85);
+    }
+    .og__foot-rule {
+      width: 1px; height: 18px; background: rgba(255, 255, 255, 0.4);
+    }
+  </style>
+</head>
+<body>
+  <div class="og" id="og">
+    <div class="og__brand">
+      <img src="../assets/logo-mark.svg" alt="">
+      <span class="og__brand-word">PODE</span>
+    </div>
+
+    <div class="og__mark"><img src="../assets/logo-mark-gradient.svg" alt=""></div>
+
+    <div class="og__main">
+      <h1 id="main"></h1>
+      <span class="sub" id="sub"></span>
+    </div>
+
+    <div class="og__foot">
+      <span class="og__foot-eyebrow">PODE INC.</span>
+      <span class="og__foot-rule"></span>
+      <span class="og__foot-tag" id="tag"></span>
+    </div>
+  </div>
+
+  <script>
+    const COPY = {
+      en: {
+        main: 'What is potential.',
+        sub: 'We move like delta force.',
+        tag: 'Human × AI = Creative',
+      },
+      ja: {
+        main: '可能性とは何か。',
+        sub: '私たちはデルタフォースのように動く。',
+        tag: '人間 × AI = クリエイティブ',
+      }
+    };
+    function render(lang) {
+      const c = COPY[lang] || COPY.en;
+      document.getElementById('og').setAttribute('lang', lang);
+      document.getElementById('main').textContent = c.main;
+      document.getElementById('sub').textContent  = c.sub;
+      document.getElementById('tag').textContent  = c.tag;
+    }
+    window.renderOG = render;
+    render(new URLSearchParams(location.search).get('lang') || 'en');
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Card</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: var(--bg-canvas); }
+  .card { box-sizing: border-box; padding: 28px 32px; }
+  .row { display: grid; grid-template-columns: 110px 1fr; gap: 16px 24px; align-items: baseline; }
+  .meta { font-family: var(--font-display-en); font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-3); padding-top: 14px; }
+  .spec { color: var(--fg); font-family: 'Inter', sans-serif; }
+  .mega { font-weight: 900; font-size: 80px; line-height: 0.95; letter-spacing: -0.04em; }
+  .it   { font-style: italic; font-weight: 800; color: var(--pode-orange); }
+  .h1   { font-weight: 800; font-size: 48px; line-height: 1.05; letter-spacing: -0.025em; }
+  .h2   { font-weight: 700; font-size: 30px; line-height: 1.1; letter-spacing: -0.02em; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="row">
+    <div class="meta">Mega<br/>Inter 900</div>
+    <div class="spec mega">What is potential.</div>
+
+    <div class="meta">Italic<br/>accent line</div>
+    <div class="spec mega it" style="font-size: 56px;">We move like delta force.</div>
+
+    <div class="meta">H1<br/>section</div>
+    <div class="spec h1">Companion, not contractor.</div>
+
+    <div class="meta">H2</div>
+    <div class="spec h2">Four deltas. Δ1 — Δ4.</div>
+  </div>
+</div>
+</body>
+</html>

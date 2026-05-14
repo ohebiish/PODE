@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Card</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: var(--bg-canvas); }
+  .card { box-sizing: border-box; padding: 28px 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px 36px; }
+  .col h4 { font-family: 'Inter', sans-serif; font-size: 10px; letter-spacing: 0.20em; text-transform: uppercase; color: var(--ink-3); margin: 0 0 12px 0; font-weight: 700; }
+  .col.do h4 { color: var(--pode-orange); }
+  ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 6px; }
+  li { font-family: 'Inter', sans-serif; font-size: 13px; line-height: 1.5; color: var(--fg); padding-left: 18px; position: relative; }
+  li::before { content: ""; position: absolute; left: 0; top: 8px; width: 8px; height: 8px; }
+  .do li::before { background: var(--pode-orange); clip-path: polygon(50% 0, 100% 100%, 0 100%); }
+  .dont li::before { background: transparent; border: 1px solid var(--ink-4); top: 7px; width: 7px; height: 7px; clip-path: polygon(50% 0, 100% 100%, 0 100%); }
+  li.jp { font-family: 'Noto Sans JP', sans-serif; letter-spacing: 0.04em; }
+  li em { font-style: italic; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="col do">
+    <h4>Voice · do</h4>
+    <ul>
+      <li>What is potential.</li>
+      <li>Companion, not contractor.</li>
+      <li class="jp">変化量で語る。</li>
+      <li>Talk in delta.</li>
+      <li>Sit down. Ask.</li>
+      <li class="jp">問いが先、答えは後。</li>
+    </ul>
+  </div>
+  <div class="col dont">
+    <h4>Voice · don't</h4>
+    <ul>
+      <li>Enterprise-grade AI solutions</li>
+      <li>DX推進パートナー</li>
+      <li>Revolutionary! 🚀 Game-changing!</li>
+      <li>End-to-end SI consulting</li>
+      <li class="jp">ソリューションを提供します</li>
+      <li>Unlock your potential...</li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

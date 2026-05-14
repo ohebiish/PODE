@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Card</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: var(--bg-canvas); }
+  .card { box-sizing: border-box; padding: 28px 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .c {
+    background: var(--pode-white);
+    border: 1px solid var(--ink-line);
+    border-radius: 12px;
+    padding: 22px 24px;
+    display: flex; flex-direction: column; gap: 8px;
+    position: relative;
+    overflow: hidden;
+  }
+  .c::before {
+    content: ""; position: absolute; left: 0; top: 0; right: 0; height: 3px;
+    background: var(--pode-orange);
+  }
+  .c.burst::before { background: linear-gradient(90deg, #FFD60A, #FF4D1F, #534AB7); }
+  .delta { font-family: 'Inter', sans-serif; font-weight: 900; font-size: 40px; line-height: 1; color: var(--pode-orange); letter-spacing: -0.02em; }
+  .h { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 18px; line-height: 1.2; letter-spacing: -0.015em; color: var(--fg); margin: 0; }
+  .jp { font-family: 'Noto Sans JP', sans-serif; font-weight: 700; font-size: 14px; color: var(--ink-2); letter-spacing: 0.04em; margin: 0; }
+  .meta { font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-3); }
+  .arrow { color: var(--pode-orange); font-family: 'Inter', sans-serif; font-weight: 700; font-size: 13px; margin-top: 6px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="c">
+    <div class="meta">VALUE · Δ1</div>
+    <div class="delta">Δ1</div>
+    <h3 class="h">Question first. Answer later.</h3>
+    <p class="jp">問いが先、答えは後。</p>
+  </div>
+  <div class="c burst">
+    <div class="meta">CASE STUDY</div>
+    <h3 class="h">A regional bank rewrote its credit review flow with Claude in three weeks.</h3>
+    <div class="arrow">Read the brief →</div>
+  </div>
+</div>
+</body>
+</html>

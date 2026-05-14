@@ -74,4 +74,20 @@ PODE — Bringing Claude to Japan. Human potential × AI potential = creative.
 
 ---
 
+## Design System (this project)
+
+Beyond the source brand files above, this project ships a working design system you can read, copy from, or extend.
+
+| File / Folder | What's inside |
+|---|---|
+| [`colors_and_type.css`](./colors_and_type.css) | All CSS vars: `--pode-orange`, `--pode-delta-burst`, `--font-display-en`, type scale, motion. Import this once and you have the system. |
+| [`SKILL.md`](./SKILL.md) | Agent-Skill manifest — usable by Claude Code as a portable skill. |
+| `preview/` | Self-contained HTML cards that populate the Design System tab (palette, gradient, type specimens, components, brand). |
+| `marketing-site/` | **PODE marketing site** — Hero → About → Equation → Values → Service → Contact. Open `marketing-site/index.html`. |
+| `sketches/` | Source logo / palette exploration SVGs (from the upstream repo). |
+
+**Source repo:** [github.com/ohebiish/PODE](https://github.com/ohebiish/PODE) — explore for the latest brand canon. If you're a designer/dev iterating in this project, push improvements to the upstream `tokens/` and `assets/` so they stay the source of truth.
+
+---
+
 © 2026 PODE Inc.

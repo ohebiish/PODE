@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Card</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: var(--bg-canvas); }
+  .card { box-sizing: border-box; padding: 24px 28px; }
+  .burst {
+    height: 220px;
+    border-radius: var(--r-md);
+    background: linear-gradient(135deg, #FFD60A 0%, #FF4D1F 50%, #534AB7 100%);
+    position: relative;
+    box-shadow: 0 8px 32px -8px rgba(255, 77, 31, 0.35);
+    overflow: hidden;
+  }
+  .label {
+    position: absolute; left: 24px; bottom: 22px;
+    color: var(--pode-white);
+    font-family: var(--font-display-en);
+  }
+  .label .name { font-weight: 900; font-size: 22px; letter-spacing: -0.01em; }
+  .label .css  { font-weight: 500; font-size: 11px; opacity: 0.85; margin-top: 4px; letter-spacing: 0.02em; font-family: var(--font-mono); }
+
+  .stops {
+    position: absolute; right: 24px; bottom: 18px;
+    display: flex; gap: 8px;
+  }
+  .stop {
+    display: flex; flex-direction: column; align-items: center; gap: 4px;
+    font-family: var(--font-display-en);
+    color: var(--pode-white);
+  }
+  .stop .swatch { width: 28px; height: 28px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.9); }
+  .stop .pct { font-size: 9px; font-weight: 700; letter-spacing: 0.06em; }
+  .stop .role { font-size: 9px; opacity: 0.85; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="burst">
+    <div class="label">
+      <div class="name">Delta Burst</div>
+      <div class="css">linear-gradient(135deg, #FFD60A, #FF4D1F, #534AB7)</div>
+    </div>
+    <div class="stops">
+      <div class="stop"><div class="swatch" style="background:#FFD60A"></div><div class="pct">0%</div><div class="role">Creative</div></div>
+      <div class="stop"><div class="swatch" style="background:#FF4D1F"></div><div class="pct">50%</div><div class="role">Human</div></div>
+      <div class="stop"><div class="swatch" style="background:#534AB7"></div><div class="pct">100%</div><div class="role">AI</div></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

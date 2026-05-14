@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Card</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: var(--pode-ink); }
+  .card {
+    box-sizing: border-box; padding: 36px 40px; min-height: 100%;
+    position: relative; overflow: hidden;
+  }
+  .card::before {
+    content: ""; position: absolute; right: -120px; top: -80px;
+    width: 440px; height: 440px; border-radius: 50%;
+    background: linear-gradient(135deg, #FFD60A 0%, #FF4D1F 50%, #534AB7 100%);
+    opacity: 0.9; z-index: 0;
+  }
+  .inner { position: relative; z-index: 1; max-width: 64%; }
+  .eyebrow {
+    font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 700;
+    letter-spacing: 0.20em; text-transform: uppercase;
+    color: var(--pode-yellow); margin-bottom: 18px;
+  }
+  .tagline {
+    font-family: 'Inter', sans-serif; font-weight: 900;
+    font-size: 44px; line-height: 1.02; letter-spacing: -0.035em;
+    color: var(--pode-white);
+  }
+  .tagline .it { font-style: italic; font-weight: 800; color: var(--pode-orange); }
+  .jp {
+    margin-top: 22px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+    letter-spacing: 0.04em;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="inner">
+    <div class="eyebrow">PODE · TAGLINE</div>
+    <div class="tagline">What is potential.<br/><span class="it">We move like delta force.</span></div>
+    <div class="jp">ポテンシャルとは何か。<br/>私たちは、デルタフォースのように動く。</div>
+  </div>
+</div>
+</body>
+</html>

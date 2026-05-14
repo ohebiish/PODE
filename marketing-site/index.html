@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PODE — What is potential. We move like delta force.</title>
+  <meta name="description" content="株式会社PODE / PODE Inc. Claudeを日本に普及させるクリエイティブ伴走組織。Human × AI = Creative.">
+  <link rel="stylesheet" href="../colors_and_type.css">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="icon" href="../assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="../assets/logo-mark.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="../assets/favicon-512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+  <link rel="manifest" href="./site.webmanifest">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="PODE Inc. / 株式会社PODE">
+  <meta property="og:title" content="PODE — What is potential. We move like delta force.">
+  <meta property="og:description" content="Claudeを日本に普及させるクリエイティブ伴走組織。Human × AI = Creative.">
+  <meta property="og:image" content="../assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ja_JP">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PODE — What is potential. We move like delta force.">
+  <meta name="twitter:description" content="Claudeを日本に普及させるクリエイティブ伴走組織。">
+  <meta name="twitter:image" content="../assets/twitter-card.png">
+</head>
+<body>
+  <div id="root"></div>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+  <script type="text/babel" src="./tweaks-panel.jsx"></script>
+  <script type="text/babel" src="./Header.jsx"></script>
+  <script type="text/babel" src="./Hero.jsx"></script>
+  <script type="text/babel" src="./About.jsx"></script>
+  <script type="text/babel" src="./Equation.jsx"></script>
+  <script type="text/babel" src="./Values.jsx"></script>
+  <script type="text/babel" src="./Service.jsx"></script>
+  <script type="text/babel" src="./Contact.jsx"></script>
+  <script type="text/babel" src="./Footer.jsx"></script>
+
+  <script type="text/babel">
+    // ─── Tweaks defaults — editable on disk by the host ───────────────────
+    const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+      "orange": "#FF4D1F",
+      "burstAngle": 135,
+      "orbSizeVw": 48,
+      "orbX": -120,
+      "orbY": 100
+    }/*EDITMODE-END*/;
+
+    // Curated orange options — keep brand-compatible (no pastels, no reds).
+    const ORANGE_OPTIONS = [
+      "#FF4D1F",  // brand default
+      "#FF3300",  // more vivid / saturated
+      "#E63D14",  // deeper / dialed back
+      "#FF7042"   // softer / lighter
+    ];
+
+    // Helpers to derive Delta Burst + hover/press from a chosen orange.
+    function mix(a, b, t) {
+      const ah = parseInt(a.slice(1), 16), bh = parseInt(b.slice(1), 16);
+      const ar=(ah>>16)&255, ag=(ah>>8)&255, ab=ah&255;
+      const br=(bh>>16)&255, bg=(bh>>8)&255, bb=bh&255;
+      const r=Math.round(ar+(br-ar)*t), g=Math.round(ag+(bg-ag)*t), bl=Math.round(ab+(bb-ab)*t);
+      return '#'+[r,g,bl].map(v=>v.toString(16).padStart(2,'0')).join('');
+    }
+
+    function App() {
+      const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+      const [scrolled, setScrolled] = React.useState(false);
+
+      React.useEffect(() => {
+        const onScroll = () => setScrolled(window.scrollY > 24);
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+        return () => window.removeEventListener('scroll', onScroll);
+      }, []);
+
+      // Apply tweaks to CSS vars on :root so every component picks them up.
+      React.useEffect(() => {
+        const root = document.documentElement;
+        const orange = t.orange;
+        root.style.setProperty('--pode-orange', orange);
+        root.style.setProperty('--accent', orange);
+        root.style.setProperty('--orange-hover', mix(orange, '#000000', 0.12));
+        root.style.setProperty('--orange-press', mix(orange, '#000000', 0.22));
+        root.style.setProperty('--orange-soft', orange + '14');  // 8% via hex alpha
+        root.style.setProperty('--orange-line', orange + '40');  // 25%
+        root.style.setProperty(
+          '--pode-delta-burst',
+          `linear-gradient(${t.burstAngle}deg, #FFD60A 0%, ${orange} 50%, #534AB7 100%)`
+        );
+        root.style.setProperty('--tw-orb-size', t.orbSizeVw + 'vw');
+        root.style.setProperty('--tw-orb-x', t.orbX + 'px');
+        root.style.setProperty('--tw-orb-y', t.orbY + 'px');
+      }, [t.orange, t.burstAngle, t.orbSizeVw, t.orbX, t.orbY]);
+
+      return (
+        <div className="shell">
+          <Header scrolled={scrolled} />
+          <main>
+            <Hero />
+            <About />
+            <Equation />
+            <Values />
+            <Service />
+            <Contact />
+          </main>
+          <Footer />
+
+          <TweaksPanel title="PODE site · tweaks">
+            <TweakSection label="Brand color" />
+            <TweakColor
+              label="Orange"
+              value={t.orange}
+              options={ORANGE_OPTIONS}
+              onChange={(v) => setTweak('orange', v)}
+            />
+
+            <TweakSection label="Delta Burst" />
+            <TweakSlider
+              label="Gradient angle"
+              value={t.burstAngle}
+              min={0} max={360} step={5} unit="°"
+              onChange={(v) => setTweak('burstAngle', v)}
+            />
+
+            <TweakSection label="Hero orb" />
+            <TweakSlider
+              label="Size"
+              value={t.orbSizeVw}
+              min={24} max={72} step={1} unit="vw"
+              onChange={(v) => setTweak('orbSizeVw', v)}
+            />
+            <TweakSlider
+              label="Right offset"
+              value={t.orbX}
+              min={-400} max={120} step={10} unit="px"
+              onChange={(v) => setTweak('orbX', v)}
+            />
+            <TweakSlider
+              label="Top offset"
+              value={t.orbY}
+              min={-80} max={400} step={10} unit="px"
+              onChange={(v) => setTweak('orbY', v)}
+            />
+          </TweaksPanel>
+        </div>
+      );
+    }
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+  </script>
+</body>
+</html>

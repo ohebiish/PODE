@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Card</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: var(--bg-canvas); }
+  .card { box-sizing: border-box; padding: 28px 32px; display: flex; flex-direction: column; gap: 18px; }
+  .row { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+  .lbl { font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.20em; text-transform: uppercase; color: var(--ink-3); min-width: 88px; }
+
+  .field { display: flex; flex-direction: column; gap: 6px; min-width: 240px; }
+  .field-label { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2); }
+  .input {
+    font-family: 'Inter', sans-serif; font-size: 15px; color: var(--fg);
+    background: var(--pode-white);
+    border: 1px solid var(--ink-line);
+    border-radius: 10px;
+    padding: 11px 14px;
+    outline: none;
+    transition: border-color 200ms, box-shadow 200ms;
+  }
+  .input:focus { border-color: var(--pode-orange); box-shadow: 0 0 0 3px rgba(255, 77, 31, 0.18); }
+  .input::placeholder { color: var(--ink-4); }
+
+  .chip {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600;
+    padding: 5px 12px;
+    background: var(--pode-white);
+    color: var(--fg);
+    border: 1px solid var(--ink-line);
+    border-radius: 999px;
+  }
+  .chip.orange { background: var(--pode-orange); color: var(--pode-white); border-color: var(--pode-orange); }
+  .chip.ink { background: var(--pode-ink); color: var(--pode-white); border-color: var(--pode-ink); }
+  .chip.purple { background: var(--pode-purple); color: var(--pode-white); border-color: var(--pode-purple); }
+  .chip .dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="row">
+    <div class="lbl">Inputs</div>
+    <div class="field">
+      <div class="field-label">Company / 会社名</div>
+      <input class="input" placeholder="株式会社 ____" />
+    </div>
+    <div class="field">
+      <div class="field-label">Email</div>
+      <input class="input" value="hello@pode.jp" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="lbl">Chips</div>
+    <span class="chip"><span class="dot"></span>Active</span>
+    <span class="chip orange">Δ delta force</span>
+    <span class="chip purple">Claude × PODE</span>
+    <span class="chip ink">タイアップ</span>
+    <span class="chip">Bilingual</span>
+  </div>
+</div>
+</body>
+</html>

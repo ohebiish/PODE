@@ -1,0 +1,226 @@
+/* ============================================================
+   PODE — Colors & Type Foundation
+   株式会社PODE / PODE Inc.
+   Source of truth: tokens/colors.json, tokens/typography.json, BRAND.md
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+
+:root {
+  /* ============================================================
+     BRAND COLORS  (canonical — from tokens/colors.json)
+     ============================================================ */
+
+  /* Primary — Human / 人の熱量・主体性 */
+  --pode-orange:  #FF4D1F;
+
+  /* Canvas + Ink */
+  --pode-white:   #FFFFFF;
+  --pode-ink:     #0A0A0A;
+
+  /* Sub — used sparingly to mean specific concepts */
+  --pode-purple:  #534AB7;   /* AI / Claude */
+  --pode-yellow:  #FFD60A;   /* Creative / 閃き */
+
+  /* Delta Burst — THE signature gradient.
+     Creative (閃き) → Human (人) → AI (Claude / 知性) */
+  --pode-delta-burst: linear-gradient(135deg, #FFD60A 0%, #FF4D1F 50%, #534AB7 100%);
+  /* Radial variant — used for "burst" backgrounds */
+  --pode-delta-burst-radial: radial-gradient(circle at 30% 30%, #FFD60A 0%, #FF4D1F 40%, #534AB7 100%);
+
+  /* Derived neutrals — never call these "gray", they're ink-at-opacity */
+  --ink-1:   #0A0A0A;   /* 100% — body text */
+  --ink-2:   rgba(10, 10, 10, 0.72);   /* secondary text */
+  --ink-3:   rgba(10, 10, 10, 0.55);   /* tertiary, captions */
+  --ink-4:   rgba(10, 10, 10, 0.32);   /* muted */
+  --ink-line:rgba(10, 10, 10, 0.10);   /* borders, hairlines */
+  --ink-soft:rgba(10, 10, 10, 0.04);   /* surfaces */
+
+  /* Orange shades — derived for hover/press only */
+  --orange-hover: #E64418;
+  --orange-press: #CC3D15;
+  --orange-soft:  rgba(255, 77, 31, 0.08);  /* tinted surface */
+  --orange-line:  rgba(255, 77, 31, 0.25);
+
+  /* Semantic surfaces & text */
+  --fg:          var(--ink-1);
+  --fg-muted:    var(--ink-2);
+  --fg-on-orange:var(--pode-white);
+  --fg-on-ink:   var(--pode-white);
+
+  --bg-canvas:   var(--pode-white);
+  --bg-soft:     var(--ink-soft);
+  --bg-ink:      var(--pode-ink);
+
+  --accent:        var(--pode-orange);
+  --accent-hover:  var(--orange-hover);
+  --accent-press:  var(--orange-press);
+
+  --border:        var(--ink-line);
+
+  /* Shadows — orange-tinted at small amounts, otherwise warm-black */
+  --shadow-soft:  0 1px 2px rgba(10, 10, 10, 0.04), 0 2px 8px rgba(10, 10, 10, 0.05);
+  --shadow-card:  0 2px 4px rgba(10, 10, 10, 0.06), 0 12px 32px -8px rgba(10, 10, 10, 0.10);
+  --shadow-lift:  0 4px 12px rgba(10, 10, 10, 0.08), 0 24px 56px -16px rgba(10, 10, 10, 0.18);
+  --shadow-glow:  0 8px 40px -8px rgba(255, 77, 31, 0.45);
+
+  /* ============================================================
+     TYPE  (provisional — from tokens/typography.json)
+     - Inter Bold/Black for English display, letter-spacing
+       opens up for wordmark moments (0.08em rule).
+     - Noto Sans JP for Japanese.
+     - No serif. No display alternate.
+     ============================================================ */
+
+  --font-display-en: 'Inter', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  --font-display-jp: 'Noto Sans JP', 'Inter', 'Hiragino Sans', 'Yu Gothic', sans-serif;
+  --font-body-en:    'Inter', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body-jp:    'Noto Sans JP', 'Inter', 'Hiragino Sans', 'Yu Gothic', sans-serif;
+  --font-mono:       ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, monospace;
+
+  /* Type scale — fluid, set to Inter's metrics */
+  --t-mega:    clamp(64px, 10vw, 156px);   /* hero, single statements */
+  --t-display: clamp(48px, 6vw, 96px);     /* page openers */
+  --t-h1:      clamp(40px, 4.4vw, 64px);
+  --t-h2:      clamp(30px, 3.2vw, 44px);
+  --t-h3:      clamp(22px, 2.0vw, 28px);
+  --t-h4:      18px;
+  --t-body-lg: 18px;
+  --t-body:    16px;
+  --t-small:   14px;
+  --t-micro:   12px;
+  --t-eyebrow: 11px;
+
+  /* Line heights (from typography.json rules) */
+  --lh-display: 1.15;
+  --lh-body:    1.7;
+  --lh-tight:   1;
+
+  /* Tracking */
+  --track-wordmark: 0.08em;   /* PODE wordmark — explicit brand rule */
+  --track-eyebrow:  0.20em;
+  --track-display: -0.02em;
+  --track-tight:   -0.03em;
+
+  /* Spacing — 4px base */
+  --s-1: 4px;   --s-2: 8px;   --s-3: 12px;  --s-4: 16px;
+  --s-5: 20px;  --s-6: 24px;  --s-8: 32px;  --s-10: 40px;
+  --s-12: 48px; --s-16: 64px; --s-20: 80px; --s-24: 96px; --s-32: 128px;
+
+  /* Radii — restrained */
+  --r-0: 0px;  --r-xs: 4px;  --r-sm: 8px;  --r-md: 12px;  --r-lg: 20px;  --r-pill: 999px;
+
+  /* Motion — fast and decisive ("delta force") */
+  --ease-delta: cubic-bezier(0.7, 0, 0.15, 1);
+  --ease-out:   cubic-bezier(0.2, 0.7, 0.2, 1);
+  --dur-1: 120ms;  --dur-2: 200ms;  --dur-3: 340ms;  --dur-4: 600ms;
+}
+
+/* ============================================================
+   SEMANTIC TYPE
+   ============================================================ */
+
+html, body {
+  background: var(--bg-canvas);
+  color: var(--fg);
+  font-family: var(--font-body-en);
+  font-size: var(--t-body);
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.mega, h1.display {
+  font-family: var(--font-display-en);
+  font-weight: 900;
+  font-size: var(--t-mega);
+  line-height: var(--lh-display);
+  letter-spacing: var(--track-tight);
+  color: var(--fg);
+}
+
+h1, .h1 {
+  font-family: var(--font-display-en);
+  font-weight: 800;
+  font-size: var(--t-h1);
+  line-height: var(--lh-display);
+  letter-spacing: var(--track-display);
+  color: var(--fg);
+}
+
+h2, .h2 {
+  font-family: var(--font-display-en);
+  font-weight: 800;
+  font-size: var(--t-h2);
+  line-height: var(--lh-display);
+  letter-spacing: var(--track-display);
+}
+
+h3, .h3 {
+  font-family: var(--font-display-en);
+  font-weight: 700;
+  font-size: var(--t-h3);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+h4, .h4 {
+  font-family: var(--font-display-en);
+  font-weight: 700;
+  font-size: var(--t-h4);
+  line-height: 1.4;
+}
+
+p, .body {
+  font-size: var(--t-body);
+  line-height: var(--lh-body);
+  color: var(--fg-muted);
+  text-wrap: pretty;
+}
+
+.body-lg { font-size: var(--t-body-lg); line-height: 1.6; color: var(--fg-muted); }
+.small   { font-size: var(--t-small);  line-height: 1.5; color: var(--ink-3); }
+.micro   { font-size: var(--t-micro);  line-height: 1.4; color: var(--ink-3); }
+
+/* Eyebrow — used for section labels.
+   Always uppercase, tracked open. */
+.eyebrow {
+  font-family: var(--font-display-en);
+  font-size: var(--t-eyebrow);
+  font-weight: 700;
+  letter-spacing: var(--track-eyebrow);
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* Japanese display + body */
+.jp-display {
+  font-family: var(--font-display-jp);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+.jp-body {
+  font-family: var(--font-body-jp);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: var(--lh-body);
+}
+
+/* The PODE wordmark — explicit tracking rule from BRAND.md */
+.pode-wordmark {
+  font-family: var(--font-display-en);
+  font-weight: 800;
+  letter-spacing: var(--track-wordmark);
+  color: var(--fg);
+}
+
+/* Delta Burst type — fill text with the signature gradient */
+.delta-burst-text {
+  background: var(--pode-delta-burst);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Card</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: var(--bg-canvas); }
+  .card {
+    box-sizing: border-box; padding: 40px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px;
+    position: relative; overflow: hidden; min-height: 100%;
+  }
+  .tag { font-family: var(--font-display-en); font-size: 10px; font-weight: 700; letter-spacing: 0.20em; text-transform: uppercase; color: var(--pode-orange); }
+  .eq {
+    display: flex; align-items: center; gap: 24px; flex-wrap: wrap; justify-content: center;
+    font-family: 'Inter', sans-serif;
+  }
+  .term { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .orb { width: 70px; height: 70px; border-radius: 50%; }
+  .orb-orange { background: #FF4D1F; box-shadow: 0 6px 20px -4px rgba(255,77,31,0.45); }
+  .orb-purple { background: #534AB7; box-shadow: 0 6px 20px -4px rgba(83,74,183,0.45); }
+  .orb-burst  { background: linear-gradient(135deg, #FFD60A 0%, #FF4D1F 50%, #534AB7 100%); box-shadow: 0 6px 20px -4px rgba(255,214,10,0.45); }
+  .lbl { font-weight: 800; font-size: 18px; letter-spacing: -0.01em; color: var(--fg); }
+  .op { font-weight: 300; font-size: 36px; color: var(--ink-4); }
+  .sub { font-family: 'Noto Sans JP', sans-serif; font-size: 13px; color: var(--ink-2); letter-spacing: 0.04em; margin-top: 6px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="tag">02 · THE EQUATION</div>
+  <div class="eq">
+    <div class="term"><div class="orb orb-orange"></div><div class="lbl">Human</div></div>
+    <div class="op">×</div>
+    <div class="term"><div class="orb orb-purple"></div><div class="lbl">AI</div></div>
+    <div class="op">=</div>
+    <div class="term"><div class="orb orb-burst"></div><div class="lbl">Creative</div></div>
+  </div>
+  <div class="sub">人間のポテンシャル × AI（Claude）のポテンシャル = クリエイティブ</div>
+</div>
+</body>
+</html>

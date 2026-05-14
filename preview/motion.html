@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Card</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: var(--bg-canvas); }
+  .card { box-sizing: border-box; padding: 28px 32px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .row { display: flex; align-items: center; gap: 14px; }
+  .name { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; color: var(--fg); }
+  .val  { font-family: 'Inter', sans-serif; font-size: 10px; color: var(--ink-3); margin-top: 2px; }
+  .track { position: relative; width: 100%; height: 6px; background: var(--ink-soft); border-radius: 999px; overflow: hidden; }
+  .ball { position: absolute; top: -5px; width: 16px; height: 16px; background: var(--pode-orange); border-radius: 50%; animation-duration: 1.6s; animation-iteration-count: infinite; animation-direction: alternate; }
+  .e1 { animation-name: m1; animation-timing-function: cubic-bezier(0.7, 0, 0.15, 1); }
+  .e2 { animation-name: m1; animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1); }
+  .e3 { animation-name: m1; animation-timing-function: cubic-bezier(0.6, 0, 0.8, 0.3); }
+  @keyframes m1 { from { left: 0; } to { left: calc(100% - 16px); } }
+  .item { display: flex; flex-direction: column; gap: 10px; }
+  .grp { font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.20em; text-transform: uppercase; color: var(--ink-3); grid-column: 1 / -1; margin-bottom: 4px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="grp">Motion · 1.6s loop · easing comparison</div>
+  <div class="item">
+    <div class="name">ease-delta ★ default</div>
+    <div class="track"><div class="ball e1"></div></div>
+    <div class="val">cubic-bezier(0.7, 0, 0.15, 1) · fast in, deliberate settle</div>
+  </div>
+  <div class="item">
+    <div class="name">ease-out</div>
+    <div class="track"><div class="ball e2"></div></div>
+    <div class="val">cubic-bezier(0.2, 0.7, 0.2, 1)</div>
+  </div>
+  <div class="item">
+    <div class="name">ease-in</div>
+    <div class="track"><div class="ball e3"></div></div>
+    <div class="val">cubic-bezier(0.6, 0, 0.8, 0.3)</div>
+  </div>
+</div>
+</body>
+</html>
